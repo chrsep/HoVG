@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "webpack --optimize-minimize --optimize-occurrence-order --optimize-dedupe ./Index.jsx ",
+    "build": "webpack --optimize-minimize --optimize-occurrence-order --optimize-dedupe ./src/index.jsx ",
     "watch": "webpack-dev-server --hot --inline --config webpack.config.js --port 3000 --devtool eval"
   },
   "repository": {

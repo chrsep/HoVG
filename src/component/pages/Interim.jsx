@@ -5,7 +5,11 @@ import styles from '../../styles/pages/interim.css'
 class Interim extends React.Component{
     render(){
         return(
-            <div></div>
+            <div>
+                <div styleName="line"></div>
+                <div styleName="line"></div>
+                <div styleName="line"></div>
+            </div>
         )
     }
 }

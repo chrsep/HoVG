@@ -4,7 +4,7 @@ var lost = require('lost');
 
 module.exports = {
     entry:
-        './Index.jsx', // Your appʼs entry point
+        './src/index.jsx', // Your appʼs entry point
 
     output: {
         filename: 'bundle.js'

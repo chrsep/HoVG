@@ -19,7 +19,7 @@ class Button extends React.Component{
     }
     onDown(){
         let {box} = this.refs;
-        TweenLite.to(box, 0.1, {scaleX:1.6, scaleY:1.5});
+        TweenLite.to(box, 0.1, {scaleX:1.5, scaleY:1.4});
     }
     render() {
         return (
