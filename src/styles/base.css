@@ -1,10 +1,11 @@
+/*noinspection ALL*/
 @define-extend verticalAlign {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-:root{
+:root {
     --baseColor: #212121;
     --accentColor: #EA2E49;
     --textColor: #eeeff7;

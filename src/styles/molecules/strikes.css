@@ -1,0 +1,6 @@
+.strikes {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(-23deg) translateY(-14em)
+}

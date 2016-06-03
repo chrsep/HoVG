@@ -1,0 +1,14 @@
+.container{
+    height: calc(100% - 4rem);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.menu{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}

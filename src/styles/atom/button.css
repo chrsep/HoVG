@@ -1,11 +1,14 @@
 @import "../base.css";
 
-.container{
+.container {
     margin: 1rem;
     display: inline-block;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--accentColor);
 }
 
-.box{
+.box {
     width: 14.5rem;
     height: 3.1rem;
     position: absolute;
@@ -13,10 +16,4 @@
     border-radius: 0.05rem;
     border: 0.3rem solid;
     opacity: 0;
-}
-
-a{
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--accentColor);
 }

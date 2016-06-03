@@ -1,35 +1,41 @@
 @import "../base.css";
 
-.container{
+.container {
     height: 100%;
     text-align: center;
     user-select: none;
-    cursor:default;
+    cursor: default;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
-.title{
+.title {
     font-weight: 400;
-    font-size:11.6rem;
+    font-size: 11.6rem;
     margin: 0.5rem;
 }
 
-.desc{
+.desc {
     font-weight: 100;
-    font-size:3.2rem;
+    font-size: 3.2rem;
 }
 
-.content{
-    font-size:3.2rem;
+.content {
+    font-size: 3.2rem;
     margin-bottom: 10rem;
-    @extend verticalAlign;
+@extend verticalAlign;
 }
 
-.explore{
+.explore {
     margin: 8rem;
 }
 
-.strikes{
+.strikes {
     position: absolute;
     height: 100%;
     width: 100%;
+    transform: rotate(-23deg) translateY(-14em)
 }
