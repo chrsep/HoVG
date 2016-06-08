@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack  --output-file ./build/bundle.js --devtool sourcemap -w --chache ./cache",
     "build": "webpack --optimize-minimize --optimize-occurrence-order --optimize-dedupe ./src/index.jsx ",
-    "watch": "webpack-dev-server --hot --inline --config webpack.config.js --port 3000 --devtool sourcemap",
+    "watch": "webpack-dev-server --hot --inline --config webpack.config.js --port 3000",
     "ngrok": "ngrok http 3000",
     "debug": "webpack  --output-file ./build/bundle.js --devtool sourcemap -w --chache ./cache"
   },
