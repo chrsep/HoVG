@@ -27,10 +27,10 @@ class Menu extends React.Component {
 
 	render() {
 		let menus = [
-			{text:'Inception', key:'menu1', to:'first', delay: 1},
-			{text:'Popularisation',key:'menu2', to:'second', delay: 1},
-			{text:'Mainstream', key:'menu3', to:'third', delay: 1},
-			{text:'Disruption', key:'menu4', to:'fourth', delay: 1}
+			{text:'Inception',year:'1945 - 1946', key:'menu1', to:'first', delay: 1},
+			{text:'Popularisation',year:'1945 - 1946',key:'menu2', to:'second', delay: 1},
+			{text:'Mainstream',year:'1945 - 1946', key:'menu3', to:'third', delay: 1},
+			{text:'Disruption',year:'1945 - 1946', key:'menu4', to:'fourth', delay: 1}
 		];
 		return (
 			<div ref='container' styleName="container">
@@ -40,6 +40,7 @@ class Menu extends React.Component {
 							<MenuItem text={props.text}
 							          key={props.key}
 							          delay={props.delay}
+							          year={props.year}
 							          to={props.to}/>
 						</div>
 					)})}

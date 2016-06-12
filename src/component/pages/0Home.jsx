@@ -1,7 +1,7 @@
 import React from "react";
 import CSSModules from "react-css-modules";
 import styles from "../../styles/pages/0home.css";
-import Button from "../atom/button.jsx";
+import Button from "../molecules/button.jsx";
 import Strikes from "../molecules/strikes.jsx";
 
 class Home extends React.Component {

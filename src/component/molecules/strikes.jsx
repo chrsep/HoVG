@@ -10,7 +10,7 @@ class Strikes extends React.Component {
 				[13, 5.2, 10, 6.5, 4.8],
 				[11, 12, 9.3, 1, 19],
 				[16.7, 7, 15, 3, 18]];
-		let produceStrikes = (data) => {
+		let produceStrikes = data => {
 			return (
 				data.map(item => {
 					return (<Strike delay={item} key={item}/>)

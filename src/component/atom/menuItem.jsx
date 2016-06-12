@@ -7,7 +7,8 @@ class MenuItem extends React.Component {
 	render() {
 		return (
 			<Link styleName="container" to={this.props.to} key={this.props.key + "-link"}>
-				{this.props.text}
+				<div styleName="text">{this.props.text}</div>
+				<div styleName="year">{this.props.year}</div>
 			</Link>
 		)
 	}

@@ -1,6 +1,6 @@
 import React from 'react'
 import CSSModules from 'react-css-modules'
-import styles from '../../styles/atom/button.css'
+import styles from '../../styles/molecules/button.css'
 import {Link} from 'react-router'
 
 class Button extends React.Component {
