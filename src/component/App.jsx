@@ -21,6 +21,11 @@ class App extends React.Component {
 	render() {
 		return (
 			<div styleName="container">
+				<div styleName="audio">
+					<a href="/">
+						<img src="asset/ic_volume_up_white_24px.svg" alt=""/>
+					</a>
+				</div>
 				<TransitionGroup component="div">
 					{this.state.isMenuShown ?
 						<Menu menuOn={this.menuOn.bind(this)} menuOff={this.menuOff.bind(this)}/> : null

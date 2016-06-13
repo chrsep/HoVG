@@ -9,20 +9,20 @@ class Menu extends React.Component {
 		let {menu1,menu2,menu3,menu4, container} = this.refs;
 		TweenMax.from(container, 0.3, {opacity:0});
 
-		animIn.from(menu1, 1, {x: -460}, 0.1)
-			.from(menu2, 1, {x: -460}, 0.3)
-			.from(menu3, 1, {x: -460}, 0.6)
-			.from(menu4, 1, {x: -460}, 0.9);
+		animIn.from(menu1, 0.6, {x: -460}, 0.1)
+			.from(menu2, 0.6, {x: -460}, 0.2)
+			.from(menu3, 0.6, {x: -460}, 0.3)
+			.from(menu4, 0.6, {x: -460}, 0.4);
 	}
 
 	componentWillLeave(callback){
 		let animIn = new TimelineMax({onComplete: callback});
 		let {menu1,menu2,menu3,menu4, container} = this.refs;
 		TweenMax.to(container, 0.3, {opacity:0});
-		animIn.to(menu1, 1, {x: -460, width: 0}, 0.1)
-			.to(menu2, 1, {x: -460, width: 0}, 0.3)
-			.to(menu3, 1, {x: -460, width: 0}, 0.6)
-			.to(menu4, 1, {x: -460, width: 0}, 0.9);
+		animIn.to(menu1, 0.6, {x: -460, width: 0}, 0.1)
+			.to(menu2, 0.6, {x: -460, width: 0}, 0.2)
+			.to(menu3, 0.6, {x: -460, width: 0}, 0.3)
+			.to(menu4, 0.6, {x: -460, width: 0}, 0.4);
 	}
 
 	render() {

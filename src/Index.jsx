@@ -14,7 +14,7 @@ class Index extends React.Component {
 	componentDidMount() {
 		let audio = new Audio('./asset/Cylinder_Five.mp3');
 		audio.loop = true;
-		audio.play();
+		
 	}
 
 	render() {

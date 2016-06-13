@@ -1,6 +1,5 @@
 var precss = require('precss');
 var cssnext = require('postcss-cssnext');
-var lost = require('lost');
 
 module.exports = {
 	entry: './src/index.jsx', // Your appʼs entry point
@@ -23,6 +22,6 @@ module.exports = {
 		]
 	},
 	postcss: function () {
-		return [precss, cssnext, lost];
+		return [precss, cssnext];
 	}
 };
