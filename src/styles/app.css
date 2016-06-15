@@ -20,7 +20,10 @@ a {
     padding: 4rem;
     text-align: right;
     position: absolute;
-    bottom: 0;
     right: 0;
     z-index: 10000;
+    transition: all 0.3s;
+}
+audio:hover{
+    transform: scale(2);
 }

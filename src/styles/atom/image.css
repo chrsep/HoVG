@@ -1,0 +1,31 @@
+.container{
+
+}
+
+.image{
+    position: absolute;
+    width: 25rem;
+
+    transition: all 0.3s;
+}
+
+.image:hover ~ .background{
+    width: 3rem;
+    margin-left: 22rem;
+}
+
+.image:hover{
+
+}
+
+.background{
+    position: absolute;
+    background-color: #0086b3;
+    width: 1rem;
+    height: 25rem;
+    margin-left: 24rem;
+    transition: all 0.3s;
+    writing-mode: vertical-rl;
+    font-size: 1.4rem;
+    padding: 1rem;
+}

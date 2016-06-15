@@ -1,6 +1,7 @@
 import React from "react";
 import CSSModules from "react-css-modules";
 import styles from "../../styles/pages/1first.css";
+import CustomImage from "../atom/customImage.jsx";
 
 class First extends React.Component {
 	constructor(props) {
@@ -27,18 +28,14 @@ class First extends React.Component {
 		let firstLayer = document.getElementsByClassName('firstLayer');
 		let secondLayer = document.getElementsByClassName('secondLayer');
 		let firstLayerElement;
-		for(firstLayerElement of firstLayer){
+		for (firstLayerElement of firstLayer) {
 			TweenMax.to(firstLayerElement, 1, {x: this.scrollLocation});
 		}
 
 		let secondLayerElement;
-		for(secondLayerElement of secondLayer){
-			TweenMax.to(secondLayerElement, 1, {x: this.scrollLocation/ 0.5});
+		for (secondLayerElement of secondLayer) {
+			TweenMax.to(secondLayerElement, 1, {x: this.scrollLocation / 0.5});
 		}
-
-		// TweenMax.to(this.refs.timeline2, 1, {x: (this.state.size / 0.4 ), backgroundColor: "red", y: 600});
-		// TweenMax.to(this.refs.timeline3, 1, {x: (this.state.size / 0.6), backgroundColor: "black", y: 300});
-		// TweenMax.to(this.refs.timeline4, 1, {x: (this.state.size / 1.21 ), backgroundColor: "purple", y: 100});
 	}
 
 	render() {
@@ -50,198 +47,34 @@ class First extends React.Component {
 				</div>
 				<div styleName="content-one">
 					<div className="firstLayer" styleName="text">
-						adfa
+						<CustomImage/>
 					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
+					<div className="secondLayer" styleName="text">
+						<CustomImage/>
 					</div>
 				</div>
 				<div styleName="content-one">
 					<div className="firstLayer" styleName="text">
-						adfa
+						<CustomImage/>
 					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
+					<div className="secondLayer" styleName="text">
+						<CustomImage/>
 					</div>
 				</div>
 				<div styleName="content-one">
 					<div className="firstLayer" styleName="text">
-						adfa
+						<CustomImage/>
 					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
+					<div className="secondLayer" styleName="text">
+						<CustomImage/>
 					</div>
 				</div>
 				<div styleName="content-one">
 					<div className="firstLayer" styleName="text">
-						adfa
+						<CustomImage/>
 					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="intro">
-					<div ref="quoteOne">One Two doesnt matter when there is three</div>
-					<div ref="quoteTwo">-Alan Turing</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="secondLayer" styleName="image-container">
-						adfa
-					</div>
-					<div className="firstLayer" styleName="text">
-						asdfasd
-					</div>
-				</div>
-				<div styleName="content-one">
-					<div className="firstLayer" styleName="text">
-						adfa
-					</div>
-					<div className="secondLayer" styleName="image-container">
-						asdfasd
+					<div className="secondLayer" styleName="text">
+						<CustomImage/>
 					</div>
 				</div>
 			</div>
