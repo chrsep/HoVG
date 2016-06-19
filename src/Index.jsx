@@ -11,12 +11,6 @@ import Third from "./component/pages/3third.jsx";
 import Fourth from "./component/pages/4fourth.jsx";
 
 class Index extends React.Component {
-	componentDidMount() {
-		let audio = new Audio('./asset/Cylinder_Five.mp3');
-		audio.loop = true;
-		
-	}
-
 	render() {
 		return (
 			<Router history={hashHistory}>

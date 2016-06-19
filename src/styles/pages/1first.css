@@ -17,23 +17,27 @@
     height: 100%;
 }
 
-.content-one{
-    height: 100%;
+.column{
+    height: 100vh;
     display: flex;
     flex-flow: column;
-    align-content: center;
-    justify-content: center;
+    width: 100vh;
 }
 
-.text{
-    height: 30rem;
-    width: 30rem;
-    margin: 2rem;
-}
-
-.image-container{
+.row{
     font-size: 2.5rem;
-    height: 30rem;
-    width: 30rem;
-    margin: 2rem;
+    height: 50vh;
+    display: flex;
+}
+
+.content{
+    height: 50vh;
+    width: 50vh;
+    overflow: hidden;
+}
+
+.content-full{
+    width: 100vh;
+    height: 50vh;
+    overflow: hidden;
 }

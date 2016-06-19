@@ -12,8 +12,7 @@ class CustomImage extends React.Component {
 	render() {
 		return (
 			<div styleName="container" ref="container">
-				<img src="../../../asset/cArticle1.jpg" alt="" styleName="image"/>
-				<div styleName="background">sdfdfsdfsdf</div>
+				<img src={this.props.image} alt="" styleName="image"/>
 			</div>
 		)
 	}
