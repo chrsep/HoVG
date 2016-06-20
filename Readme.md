@@ -6,6 +6,7 @@ We treat this project not only as an assignment but also as an experiment to lea
 The animation api ([react-transition-group](https://facebook.github.io/react/docs/animation.html)) we used here are not the recommended one to use with react. It as an escape hatch made to fill the void until a better solution is found, even [redux](http://redux.js.org/) developers [refused](https://github.com/reactjs/redux/issues/1520) to support it, preventing us from using redux. It will be replaced by something new in the future. For now [react-motion](https://github.com/chenglou/react-motion) is recommended. We decided just to use this old API to save time because we already understand it.
 
 
+
 How to use:
 -----------
 1. `npm i` to install dependencies

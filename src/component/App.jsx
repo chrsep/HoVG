@@ -92,21 +92,23 @@ class App extends React.Component {
 	render() {
 		return (
 			<div styleName="container">
-				{(this.props.location.pathname !== '/' && this.props.location.pathname !== '/interim' && !this.state.isMenuShown) ?
+				<div style={{background: 'linear-gradient(to bottom, rgba(28, 29, 33, 0.6) 0%,rgba(28, 29, 33, 0) 100%)', width:'100%', height:'8rem', position:'absolute', zIndex:99}}>
+					{(this.props.location.pathname !== '/' && !this.state.isMenuShown) ?
 					<MenuButton menuOn={this.menuOn.bind(this)}/> : null}
-				<div styleName="audio">
-					<div styleName="soundIcon" onClick={this.mute.bind(this)}
-					     style={this.state.isSoundOn ? this.shown : this.notShown}>
-						<img src="asset/ic_volume_up_white_24px.svg" alt=""/>
-					</div>
-					<div styleName="soundIcon" onClick={this.unmute.bind(this)}
-					     style={this.state.isSoundOn ?  this.notShown : this.shown}>
-						<img src="asset/ic_volume_off_white_24px.svg" alt=""/>
+					<div styleName="audio">
+						<div styleName="soundIcon" onClick={this.mute.bind(this)}
+						     style={this.state.isSoundOn ? this.shown : this.notShown}>
+							<img src="asset/ic_volume_up_white_24px.svg" alt=""/>
+						</div>
+						<div styleName="soundIcon" onClick={this.unmute.bind(this)}
+						     style={this.state.isSoundOn ?  this.notShown : this.shown}>
+							<img src="asset/ic_volume_off_white_24px.svg" alt=""/>
+						</div>
 					</div>
 				</div>
 				<TransitionGroup component="div">
 					{this.state.isMenuShown ?
-						<Menu menuOn={this.menuOn.bind(this)} menuOff={this.menuOff.bind(this)}/> : null
+						<Menu menuOn={this.menuOn.bind(this)} menuOff={this.menuOff.bind(this)} pathname={this.props.location.pathname}/> : null
 					}
 				</TransitionGroup>
 				<TransitionGroup component="div"

@@ -16,3 +16,39 @@
     display: flex;
     align-items: center;
 }
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3rem;
+    font-size: 2rem;
+    font-weight: 100;
+    display: flex;
+}
+
+.attribution-box{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3rem;
+    width: 35rem;
+    height: 20rem;
+    padding: 4rem;
+    font-size: 2rem;
+    font-weight: 100;
+    box-sizing: border-box;
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -o-pre-wrap; /* Opera */
+    white-space: pre-wrap;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.attribution:hover ~ .attribution-box{
+    opacity: 1;
+}
+
+.attribution-box:hover{
+    opacity: 1;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import CSSModules from "react-css-modules";
-import styles from "../../styles/pages/3third.css";
+import styles from "../../styles/pages/1first.css";
 import {Mainstream} from "../../data.jsx";
 import CustomImage from "../atom/customImage.jsx";
 let datas = Mainstream;
@@ -11,7 +11,15 @@ class Third extends React.Component {
 		this.scrollLocation = 0
 	}
 
-
+	componentDidMount() {
+		let {quoteOne, quoteTwo, content} = this.refs;
+		let animSequence = new TimelineLite({delay: 2});
+		animSequence.from(quoteOne, 1, {opacity: 0})
+			.from(quoteTwo, 1, {opacity: 0})
+			.to(quoteOne, 2, {opacity: 0})
+			.to(quoteTwo, 2, {opacity: 0})
+			.to(content, 1, {opacity:1, transform: 'translateX(0)'})
+	}
 	handleScroll(e) {
 		let {container} = this.refs;
 		this.scrollLocation += e.deltaY < 0 ? 100 : -100;
@@ -33,13 +41,17 @@ class Third extends React.Component {
 	}
 
 	componentWillLeave(callback) {
-		callback();
+		TweenMax.to(this.refs.content, 1, {opacity:0, transform: 'translateX(-5rem)', onComplete:callback});
 	}
 
 	render() {
 		return (
 			<div styleName="container" ref="container" onWheel={this.handleScroll.bind(this)}>
-				<div styleName="column" className="firstLayer">
+				<div styleName="intro">
+					<div ref="quoteOne">A time of domination</div>
+					<div ref="quoteTwo">Blooming and Flourishing</div>
+				</div>
+				<div styleName="column" className="firstLayer" ref="content">
 					{datas.map(data => {
 						return (
 							<div styleName="content">

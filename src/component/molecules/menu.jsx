@@ -38,7 +38,7 @@ class Menu extends React.Component {
 					return (
 						<div styleName="menu" 
 						     ref={props.key} 
-						     onClick={this.props.menuOff}>
+						     onClick={this.props.pathname != '/interim' ? this.props.menuOff : this.props.menuOn }>
 							<MenuItem text={props.text}
 							          key={props.key}
 							          delay={props.delay}
@@ -48,6 +48,17 @@ class Menu extends React.Component {
 						</div>
 					)
 				})}
+				<div styleName="attribution">
+					<img src="asset/ic_info_outline_white_24px.svg" alt=""/>
+				</div>
+				<div styleName="attribution-box">
+					Music by <br/>
+					<a href="http://chriszabriskie.com/cylinders/">Chris Zabriskie - CylinderFive</a><br/>
+					<a href="https://soundcloud.com/atn010g">Atn010 - Dawn of Machines</a><br/>
+					<a href="https://soundcloud.com/atn010g">Atn010 - BitBeat</a><br/>
+					<a href="https://soundcloud.com/dividebyzer0/quazar-axel-hedfors-funky-ltars-hybrid-longhex-2014-remix">Quazar - Funky Star</a><br/>
+					<a href="https://www.youtube.com/watch?v=tiL7qj0eE48">Audionautix - Act Three</a><br/>
+				</div>
 			</div>
 		)
 	}

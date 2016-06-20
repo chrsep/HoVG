@@ -15,6 +15,7 @@
     font-weight: 600;
     position: absolute;
     height: 100%;
+    font-weight: 100;
 }
 
 .column{
@@ -22,6 +23,8 @@
     display: flex;
     flex-flow: column wrap;
     width: 100vh;
+    transform: translateX(5rem);
+    opacity: 0;
 }
 
 .row{

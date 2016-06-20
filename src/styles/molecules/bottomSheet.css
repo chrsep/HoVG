@@ -21,9 +21,14 @@
     width: 60vw
 }
 
+.image:hover{
+    width: 60vw;
+}
+
 .image{
     overflow: hidden;
     width: 40vw;
+    transition: all 0.4s;
 }
 
 .title{

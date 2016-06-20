@@ -9,12 +9,14 @@ class CustomImage extends React.Component {
 	}
 
 	handleClick() {
-		this.props.showBottomSheet([this.props.data]);
+		if(this.props.data.Image !== "") {
+			this.props.showBottomSheet([this.props.data]);
+		}
 	}
 
 	render() {
 		return (
-			<div styleName="container" ref="container">
+			<div styleName="container" ref="container" style={this.props.data.Image === "" ? {cursor:'default'} : {}}>
 				<div ref="image" styleName="background" style={{
 					backgroundImage:'url('+this.props.data.Image+')',
 					backgroundPosition: 'center',
