@@ -3,6 +3,7 @@ import CSSModules from "react-css-modules";
 import TransitionGroup from "react-addons-transition-group";
 import styles from "../styles/app.css";
 import Menu from "./molecules/menu.jsx";
+import MenuButton from "./molecules/menuButton.jsx";
 
 class App extends React.Component {
 	constructor(props, context) {
@@ -72,6 +73,8 @@ class App extends React.Component {
 	render() {
 		return (
 			<div styleName="container">
+				{(this.props.location.pathname !== '/' && this.props.location.pathname !== '/interim' && !this.state.isMenuShown) ?
+					<MenuButton menuOn={this.menuOn.bind(this)}/> : null}
 				<div styleName="audio">
 					<div styleName="soundIcon" onClick={this.mute.bind(this)}
 					     style={this.state.isSoundOn ? this.shown : this.notShown}>

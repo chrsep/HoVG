@@ -27,7 +27,7 @@ export default[
 		"Name": "Turochamp",
 		"ShortDesc": "An algorithm devised by Alan Turing and David Champernowne on paper",
 		"LongDesc": "Turochamp is a chess program developed in 1948 by Alan Turing and David Champernowne. /nThe chess uses methods of evaluation and concepts of selectivity and dead position for the artificial intelligence engine, thinking a little more than 2 steps a head or three level of search depth to find the optimal move. /nTuring defines his evalutation features for the chess program by using  a minimax strategy, variable look-ahead quiescenes and a learning algorithm.",
-		"Image": ""
+		"Image": "asset/Alan_Turing_Aged_16.jpg"
 	},
 	{
 		"Year": 1952,

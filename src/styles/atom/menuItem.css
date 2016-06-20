@@ -12,7 +12,7 @@
     transition: color 0.3s, width 0.3s, font-size 0.3s;
     color: #eeeff7;
     text-decoration: none;
-    border-bottom: solid #424242 thin;
+    border-bottom: solid #e0e8e0 thin;
     white-space: nowrap;
     flex-flow: column;
 }
