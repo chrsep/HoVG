@@ -20,7 +20,12 @@
     opacity: 0;
 }
 
-.container:hover .content{
+.background:hover ~ .content{
+    opacity: 1;
+    transform: translateY(0rem);
+}
+
+.content:hover{
     opacity: 1;
     transform: translateY(0rem);
 }
@@ -40,4 +45,11 @@
     margin-top: 2rem;
     font-size: 1.8rem;
     font-weight: 100;
+}
+
+.background{
+    height: 50vh;
+    width: 50vh;
+    position: absolute;
+    z-index: -1;
 }

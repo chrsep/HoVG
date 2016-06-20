@@ -27,10 +27,10 @@ class Menu extends React.Component {
 
 	render() {
 		let menus = [
-			{text: 'Inception', year: '1945 - 1972', key: 'menu1', to: '/first', delay: 1},
-			{text: 'Popularisation', year: '1972-1983', key: 'menu2', to: '/second', delay: 1},
-			{text: 'Mainstream', year: '1984 - 1994', key: 'menu3', to: '/third', delay: 1},
-			{text: 'Disruption', year: '1995 onward', key: 'menu4', to: '/fourth', delay: 1}
+			{text: 'Inception', year: '1947 - 1975', key: 'menu1', to: '/first', delay: 1},
+			{text: 'Popularisation', year: '1976-1991', key: 'menu2', to: '/second', delay: 1},
+			{text: 'Mainstream', year: '1992 - 1996', key: 'menu3', to: '/third', delay: 1},
+			{text: 'Disruption', year: '1997 onward', key: 'menu4', to: '/fourth', delay: 1}
 		];
 		return (
 			<div ref='container' styleName="container">

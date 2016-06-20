@@ -2,7 +2,8 @@ import React from "react";
 import CSSModules from "react-css-modules";
 import styles from "../../styles/pages/1first.css";
 import CustomImage from "../atom/customImage.jsx";
-import datas from "../../data.jsx";
+import {inception} from "../../data.jsx";
+let datas = inception;
 
 class First extends React.Component {
 	constructor(props) {
