@@ -11,15 +11,6 @@ class First extends React.Component {
 		this.scrollLocation = 0
 	}
 
-	componentDidMount() {
-		let {quoteOne, quoteTwo} = this.refs;
-		let animSequence = new TimelineLite({delay: 2});
-		animSequence.from(quoteOne, 1, {opacity: 0})
-			.from(quoteTwo, 1, {opacity: 0})
-			.to(quoteOne, 1, {opacity: 0})
-			.to(quoteTwo, 1, {opacity: 0})
-	}
-
 
 	handleScroll(e) {
 		let {container} = this.refs;
@@ -54,16 +45,13 @@ class First extends React.Component {
 	render() {
 		return (
 			<div styleName="container" ref="container" onWheel={this.handleScroll.bind(this)}>
-				<div styleName="intro">
-					<div ref="quoteOne">One Two doesnt matter when there is three</div>
-					<div ref="quoteTwo">-Alan Turing</div>
-				</div>
 				<div styleName="column" className="firstLayer">
 					{datas.map(data => {
 						return (
 							<div styleName="content">
 								<CustomImage
 									data={data}
+								    showBottomSheet={this.props.sendDataUp}
 								/>
 							</div>
 						)

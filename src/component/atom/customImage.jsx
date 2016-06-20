@@ -9,9 +9,7 @@ class CustomImage extends React.Component {
 	}
 
 	handleClick() {
-		let {container, content, image} = this.refs;
-		let expandTl = new TimelineMax();
-		expandTl.to(content, 0.3, {opacity: 0, transform: 'translateY(-5rem)', ease: Linear.easeNone})
+		this.props.showBottomSheet([this.props.data]);
 	}
 
 	render() {
@@ -23,9 +21,13 @@ class CustomImage extends React.Component {
 					backgroundSize: 'cover'
 					}}>
 				</div>
-				<div ref="content" styleName="content" onClick={this.handleClick.bind(this)}>
+				<div
+					ref="content" styleName="content"
+					onClick={this.handleClick.bind(this)}
+					style={this.props.data.Image === "" ? {opacity:1, transform:'translateY(0)'} : {}}
+				>
 					<div styleName="title">{this.props.data.Name}</div>
-					<div styleName="year">{this.props.data.Year}</div>
+					<div styleName="year">{this.props.data.Year} - {this.props.data.Type}</div>
 					<div styleName="shortDesc">{this.props.data.ShortDesc}</div>
 				</div>
 			</div>

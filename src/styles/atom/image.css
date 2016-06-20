@@ -21,8 +21,8 @@
 }
 
 .background:hover ~ .content{
-    opacity: 1;
-    transform: translateY(0rem);
+    opacity: 1 !important;
+    transform: translateY(0rem) !important;
 }
 
 .content:hover{

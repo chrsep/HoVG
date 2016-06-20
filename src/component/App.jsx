@@ -4,11 +4,26 @@ import TransitionGroup from "react-addons-transition-group";
 import styles from "../styles/app.css";
 import Menu from "./molecules/menu.jsx";
 import MenuButton from "./molecules/menuButton.jsx";
+import BottomSheet from "./molecules/bottomSheet.jsx";
 
 class App extends React.Component {
 	constructor(props, context) {
 		super(props, context);
-		this.state = {isMenuShown: false, isSoundOn: true};
+		this.state = {isMenuShown: false, isSoundOn: true, chosenData:[{
+			"Year": 1947,
+			"Month": "",
+			"Day": null,
+			"Type": "Software",
+			"Name": "Cathode-ray Tube Amusement Device",
+			"ShortDesc": "A patent that describe interactive electronic game that simulates artillery shell arching toward a target on a cathode ray tube screen",
+			"LongDesc": "in 1947, Thomas T. Goldsmith, Jr. and Estie Ray Mann constructed an analog electronics and filled a patent for cathode-ray tube amusement device. /nIf it was constructed, the device that consisted of cathode ray tube (CRT) and ossiloscope with a set of knobs and switches, The device is purely analogue, which does not use any digital computer, memory or execute any program. The is about  firing artillery shell to a target that is projected in the CRT screen. /nThe device was invented by physicists Thomas T. Goldsmith, Jr. and Estle Ray Mann. But due to notion of that time, the device was never used or manufactured beyond the original prototype.",
+			"Additional Link 1": "https://www.youtube.com/watch?v=k_WUb-1C010",
+			"Additional Link 2": "",
+			"Image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Cathode_ray_tube_amusement_device_-_schematic.jpg",
+			"Reference Link 1": "https://en.wikipedia.org/wiki/Cathode-ray_tube_amusement_device",
+			"Reference Link 2": "http://classicgames.about.com/od/classicvideogames101/p/CathodeDevice.htm",
+			"": null
+		}]};
 		this.shown = {transition: 'all 0.5s', opacity: 1, zIndex: 2};
 		this.notShown = {transition: 'all 0.5s', opacity: 0, zIndex: 1};
 	}
@@ -70,6 +85,10 @@ class App extends React.Component {
 		this.setState({isSoundOn: true})
 	}
 
+	changeChosenData(data){
+		this.setState({chosenData: data});
+	}
+
 	render() {
 		return (
 			<div styleName="container">
@@ -96,9 +115,11 @@ class App extends React.Component {
 						key: this.props.location.pathname,
 						menuOn: this.menuOn.bind(this),
 						menuOff: this.menuOff.bind(this),
-						isMenuShown: this.state.isMenuShown
+						isMenuShown: this.state.isMenuShown,
+						sendDataUp: this.changeChosenData.bind(this)
 					})}
 				</TransitionGroup>
+				<BottomSheet data={this.state.chosenData}/>
 			</div>
 		)
 	}
