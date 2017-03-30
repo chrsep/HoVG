@@ -34,3 +34,5 @@ Dependencies
 
 **Animation:**
 [GSAP](http://greensock.com/gsap)
+
+Tested to be working correctly on Chromium 57
