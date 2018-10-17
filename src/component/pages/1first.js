@@ -1,9 +1,7 @@
-import React from "react"
-import CSSModules from "react-css-modules"
+import React, { PureComponent } from "react"
 import styles from "../../styles/pages/1first.pcss"
 import CustomImage from "../atom/customImage.js"
 import { inception } from "../../data.js"
-import { PureComponent } from "react/lib/ReactBaseClasses"
 let datas = inception
 
 class First extends PureComponent {
@@ -68,18 +66,18 @@ class First extends PureComponent {
   render() {
     return (
       <div
-        styleName="container"
+        className={styles.container}
         ref="container"
         onWheel={this.handleScroll.bind(this)}
       >
-        <div styleName="intro">
+        <div className={styles.intro}>
           <div ref="quoteOne">The beginning, a time of exploration</div>
           <div ref="quoteTwo">Ideas start taking shape</div>
         </div>
-        <div styleName="column" className="firstLayer" ref="content">
+        <div className={styles.column} ref="content">
           {datas.map(data => {
             return (
-              <div styleName="content">
+              <div className={styles.content}>
                 <CustomImage
                   data={data}
                   showBottomSheet={this.props.sendDataUp}
@@ -93,4 +91,4 @@ class First extends PureComponent {
   }
 }
 
-export default CSSModules(First, styles)
+export default First

@@ -1,9 +1,7 @@
-import React from "react"
-import CSSModules from "react-css-modules"
+import React, { PureComponent } from "react"
 import styles from "../../styles/pages/0home.pcss"
 import Button from "../molecules/button.js"
 import Strikes from "../molecules/strikes.js"
-import { PureComponent } from "react/lib/ReactBaseClasses"
 
 class Home extends PureComponent {
   constructor(props) {
@@ -46,21 +44,21 @@ class Home extends PureComponent {
     }
 
     return (
-      <div styleName="container" onMouseMove={this.listener.bind(this)}>
+      <div className={styles.container} onMouseMove={this.listener.bind(this)}>
         <div ref="strikes">
           <Strikes parallax={parallax} x={x} y={y} />
         </div>
-        <div styleName="content">
+        <div className={styles.content}>
           <div style={parallax((x / 10) * -1, (y / 10) * -1)}>
-            <div styleName="title" ref="title">
+            <div className={styles.title} ref="title">
               Video Games
             </div>
-            <div styleName="desc" ref="desc">
+            <div className={styles.desc} ref="desc">
               How it evolves and change through time,
               <br />
               Shaping our world and imagination along the way
             </div>
-            <div styleName="explore" ref="explore">
+            <div className={styles.explore} ref="explore">
               <Button text="EXPLORE" to="interim" />
             </div>
           </div>
@@ -69,4 +67,4 @@ class Home extends PureComponent {
     )
   }
 }
-export default CSSModules(Home, styles)
+export default Home

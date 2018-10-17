@@ -1,9 +1,7 @@
-import React from "react"
-import CSSModules from "react-css-modules"
-import styles from "../../styles/pages/1first.pcss"
+import React, { PureComponent } from "react"
 import { Mainstream } from "../../data.js"
 import CustomImage from "../atom/customImage.js"
-import { PureComponent } from "react/lib/ReactBaseClasses"
+import styles from "../../styles/pages/1first.pcss"
 let datas = Mainstream
 
 class Third extends PureComponent {
@@ -61,29 +59,27 @@ class Third extends PureComponent {
   render() {
     return (
       <div
-        styleName="container"
+        className={styles.container}
         ref="container"
         onWheel={this.handleScroll.bind(this)}
       >
-        <div styleName="intro">
+        <div className={styles.intro}>
           <div ref="quoteOne">A time of domination</div>
           <div ref="quoteTwo">Blooming and Flourishing</div>
         </div>
-        <div styleName="column" className="firstLayer" ref="content">
-          {datas.map(data => {
-            return (
-              <div styleName="content">
-                <CustomImage
-                  data={data}
-                  showBottomSheet={this.props.sendDataUp}
-                />
-              </div>
-            )
-          })}
+        <div className={styles.column} ref="content">
+          {datas.map(data => (
+            <div className={styles.content}>
+              <CustomImage
+                data={data}
+                showBottomSheet={this.props.sendDataUp}
+              />
+            </div>
+          ))}
         </div>
       </div>
     )
   }
 }
 
-export default CSSModules(Third, styles)
+export default Third

@@ -1,9 +1,8 @@
-import React from "react"
-import CSSModules from "react-css-modules"
-import styles from "../../styles/pages/1first.pcss"
+import React, { PureComponent } from "react"
 import { Popularisation } from "../../data.js"
 import CustomImage from "../atom/customImage.js"
-import { PureComponent } from "react/lib/ReactBaseClasses"
+import styles from "../../styles/pages/1first.pcss"
+
 let datas = Popularisation
 
 class Second extends PureComponent {
@@ -61,18 +60,18 @@ class Second extends PureComponent {
   render() {
     return (
       <div
-        styleName="container"
+        className={styles.container}
         ref="container"
         onWheel={this.handleScroll.bind(this)}
       >
-        <div styleName="intro">
+        <div className={styles.intro}>
           <div ref="quoteOne">The start of an Industry</div>
           <div ref="quoteTwo">A directed approach</div>
         </div>
-        <div styleName="column" className="firstLayer" ref="content">
+        <div className={styles.column} ref="content">
           {datas.map(data => {
             return (
-              <div styleName="content">
+              <div className={styles.content}>
                 <CustomImage
                   data={data}
                   showBottomSheet={this.props.sendDataUp}
@@ -86,4 +85,4 @@ class Second extends PureComponent {
   }
 }
 
-export default CSSModules(Second, styles)
+export default Second

@@ -1,8 +1,6 @@
-import React from "react"
-import CSSModules from "react-css-modules"
+import React, { PureComponent } from "react"
 import Strike from "../atom/Strike.js"
 import styles from "../../styles/molecules/strikes.pcss"
-import { PureComponent } from "react/lib/ReactBaseClasses"
 
 class Strikes extends PureComponent {
   render() {
@@ -15,7 +13,7 @@ class Strikes extends PureComponent {
     let produceStrikes = data =>
       data.map(item => <Strike delay={item} key={item} />)
     return (
-      <div styleName="strikes" ref="strikes">
+      <div className={styles.strikes} ref="strikes">
         <div
           style={this.props.parallax(
             (this.props.x / 40) * -1,
@@ -53,4 +51,4 @@ class Strikes extends PureComponent {
   }
 }
 
-export default CSSModules(Strikes, styles)
+export default Strikes

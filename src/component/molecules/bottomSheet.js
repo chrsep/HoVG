@@ -1,7 +1,5 @@
-import React from "react"
-import CSSModules from "react-css-modules"
+import React, { PureComponent } from "react"
 import styles from "../../styles/molecules/bottomSheet.pcss"
-import { PureComponent } from "react/lib/ReactBaseClasses"
 
 class BottomSheet extends PureComponent {
   componentDidUpdate(prevProps, prevState, prevContext) {
@@ -16,29 +14,31 @@ class BottomSheet extends PureComponent {
 
   render() {
     return (
-      <div styleName="container" ref="container">
-        <div styleName="close" onClick={this.close.bind(this)}>
+      <div className={styles.container} ref="container">
+        <div className={styles.close} onClick={this.close.bind(this)}>
           <img src="asset/ic_close_white_24px.svg" alt="" />
         </div>
-        <div styleName="image">
+        <div className={styles.image}>
           <img
             src={this.props.data[0].Image}
             alt=""
             style={{ height: "100vh" }}
           />
         </div>
-        <div styleName="content">
-          <div styleName="title">
+        <div className={styles.content}>
+          <div className={styles.title}>
             {this.props.data[0].Name}
-            <span styleName="year">
+            <span className={styles.year}>
               {this.props.data[0].Year} - {this.props.data[0].Type}
             </span>
           </div>
-          <div styleName="description">{this.props.data[0].LongDesc}</div>
+          <div className={styles.description}>
+            {this.props.data[0].LongDesc}
+          </div>
         </div>
       </div>
     )
   }
 }
 
-export default CSSModules(BottomSheet, styles)
+export default BottomSheet

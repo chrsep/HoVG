@@ -1,9 +1,7 @@
-import React from "react"
-import CSSModules from "react-css-modules"
-import styles from "../../styles/pages/1first.pcss"
+import React, { PureComponent } from "react"
 import { Disruption } from "../../data.js"
 import CustomImage from "../atom/customImage.js"
-import { PureComponent } from "react/lib/ReactBaseClasses"
+import styles from "../../styles/pages/1first.pcss"
 let datas = Disruption
 
 class Fourth extends PureComponent {
@@ -60,18 +58,18 @@ class Fourth extends PureComponent {
   render() {
     return (
       <div
-        styleName="container"
+        className={styles.container}
         ref="container"
         onWheel={this.handleScroll.bind(this)}
       >
-        <div styleName="intro">
+        <div className={styles.intro}>
           <div ref="quoteOne">Pushing all boundaries</div>
           <div ref="quoteTwo">Both imagination & technology</div>
         </div>
-        <div styleName="column" className="firstLayer" ref="content">
+        <div className={styles.column} ref="content">
           {datas.map(data => {
             return (
-              <div styleName="content">
+              <div className={styles.content}>
                 <CustomImage
                   data={data}
                   showBottomSheet={this.props.sendDataUp}
@@ -85,4 +83,4 @@ class Fourth extends PureComponent {
   }
 }
 
-export default CSSModules(Fourth, styles)
+export default Fourth

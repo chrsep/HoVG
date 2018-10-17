@@ -1,15 +1,12 @@
-import React from "react"
-import CSSModules from "react-css-modules"
+import React, { PureComponent } from "react"
 import styles from "../../styles/molecules/menu.pcss"
 import MenuItem from "../atom/menuItem.js"
-import { PureComponent } from "react/lib/ReactBaseClasses"
 
 class Menu extends PureComponent {
   componentDidMount() {
     let animIn = new TimelineMax()
     let { menu1, menu2, menu3, menu4, container } = this.refs
     TweenMax.from(container, 0.3, { opacity: 0 })
-
     animIn
       .from(menu1, 0.6, { x: -460 }, 0.1)
       .from(menu2, 0.6, { x: -460 }, 0.2)
@@ -60,14 +57,14 @@ class Menu extends PureComponent {
       }
     ]
     return (
-      <div ref="container" styleName="container">
+      <div ref="container" className={styles.container}>
         {menus.map(props => {
           return (
             <div
-              styleName="menu"
+              className={styles.menu}
               ref={props.key}
               onClick={
-                this.props.pathname != "/interim"
+                this.props.pathname !== "/interim"
                   ? this.props.menuOff
                   : this.props.menuOn
               }
@@ -82,10 +79,10 @@ class Menu extends PureComponent {
             </div>
           )
         })}
-        <div styleName="attribution">
+        <div className={styles.attribution}>
           <img src="asset/ic_info_outline_white_24px.svg" alt="" />
         </div>
-        <div styleName="attribution-box">
+        <div className={styles["attribution-box"]}>
           Music by <br />
           <a href="http://chriszabriskie.com/cylinders/">
             Chris Zabriskie - CylinderFive
@@ -109,4 +106,4 @@ class Menu extends PureComponent {
   }
 }
 
-export default CSSModules(Menu, styles)
+export default Menu
