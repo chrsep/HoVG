@@ -4,7 +4,13 @@ import style from "../styles/app.pcss"
 import Menu from "./molecules/menu.js"
 import MenuButton from "./molecules/menuButton.js"
 import BottomSheet from "./molecules/bottomSheet.js"
-import { withRouter } from "react-router-dom"
+import { Route, Switch, withRouter } from "react-router-dom"
+import Interim from "./pages/Interim"
+import First from "./pages/1first"
+import Second from "./pages/2second"
+import Third from "./pages/3third"
+import Fourth from "./pages/4fourth"
+import Home from "./pages/0Home"
 
 class App extends React.Component {
   constructor(props, context) {
@@ -113,7 +119,7 @@ class App extends React.Component {
             width: "100%",
             height: "8rem",
             position: "absolute",
-            zIndex: 99
+            zIndex: 10
           }}
         >
           {this.props.location.pathname !== "/" &&
@@ -154,13 +160,62 @@ class App extends React.Component {
               : style.container
           }
         >
-          {React.cloneElement(this.props.children, {
-            key: this.props.history.location.pathname,
-            menuOn: this.menuOn.bind(this),
-            menuOff: this.menuOff.bind(this),
-            isMenuShown: this.state.isMenuShown,
-            sendDataUp: this.changeChosenData.bind(this)
-          })}
+          <Switch>
+            <Route path="/interim">
+              <Interim
+                key={this.props.history.location.pathname}
+                menuOn={this.menuOn.bind(this)}
+                menuOff={this.menuOff.bind(this)}
+                isMenuShown={this.state.isMenuShown}
+                sendDataUp={this.changeChosenData.bind(this)}
+              />
+            </Route>
+            <Route path="/first">
+              <First
+                key={this.props.history.location.pathname}
+                menuOn={this.menuOn.bind(this)}
+                menuOff={this.menuOff.bind(this)}
+                isMenuShown={this.state.isMenuShown}
+                sendDataUp={this.changeChosenData.bind(this)}
+              />
+            </Route>
+            <Route path="/second">
+              <Second
+                key={this.props.history.location.pathname}
+                menuOn={this.menuOn.bind(this)}
+                menuOff={this.menuOff.bind(this)}
+                isMenuShown={this.state.isMenuShown}
+                sendDataUp={this.changeChosenData.bind(this)}
+              />
+            </Route>
+            <Route path="/third">
+              <Third
+                key={this.props.history.location.pathname}
+                menuOn={this.menuOn.bind(this)}
+                menuOff={this.menuOff.bind(this)}
+                isMenuShown={this.state.isMenuShown}
+                sendDataUp={this.changeChosenData.bind(this)}
+              />
+            </Route>
+            <Route path="/fourth">
+              <Fourth
+                key={this.props.history.location.pathname}
+                menuOn={this.menuOn.bind(this)}
+                menuOff={this.menuOff.bind(this)}
+                isMenuShown={this.state.isMenuShown}
+                sendDataUp={this.changeChosenData.bind(this)}
+              />
+            </Route>
+            <Route path="/">
+              <Home
+                key={this.props.history.location.pathname}
+                menuOn={this.menuOn.bind(this)}
+                menuOff={this.menuOff.bind(this)}
+                isMenuShown={this.state.isMenuShown}
+                sendDataUp={this.changeChosenData.bind(this)}
+              />
+            </Route>
+          </Switch>
         </TransitionGroup>
         <BottomSheet data={this.state.chosenData} />
       </div>

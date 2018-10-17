@@ -10,6 +10,7 @@
   right: 0;
   top: 0;
   bottom: 0;
+  z-index: 11;
 }
 
 .title {
@@ -27,6 +28,7 @@
   font-size: 3.2rem;
   margin-bottom: 10rem;
   @extend verticalAlign;
+  height: 100%;
 }
 
 .explore {
@@ -38,4 +40,12 @@
   height: 100%;
   width: 100%;
   transform: rotate(-23deg) translateY(-14em);
+}
+
+.text {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }

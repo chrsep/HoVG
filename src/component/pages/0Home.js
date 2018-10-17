@@ -49,7 +49,7 @@ class Home extends PureComponent {
           <Strikes parallax={parallax} x={x} y={y} />
         </div>
         <div className={styles.content}>
-          <div style={parallax((x / 10) * -1, (y / 10) * -1)}>
+          <div className={styles.text} style={parallax((x / 10) * -1, (y / 10) * -1)}>
             <div className={styles.title} ref="title">
               Video Games
             </div>
