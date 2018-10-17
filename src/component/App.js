@@ -1,10 +1,10 @@
 import React from "react";
 import CSSModules from "react-css-modules";
 import TransitionGroup from "react-addons-transition-group";
-import styles from "../styles/app.css";
-import Menu from "./molecules/menu.jsx";
-import MenuButton from "./molecules/menuButton.jsx";
-import BottomSheet from "./molecules/bottomSheet.jsx";
+import styles from "../styles/app.pcss";
+import Menu from "./molecules/menu.js";
+import MenuButton from "./molecules/menuButton.js";
+import BottomSheet from "./molecules/bottomSheet.js";
 
 class App extends React.Component {
 	constructor(props, context) {

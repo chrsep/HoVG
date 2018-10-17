@@ -1,6 +1,6 @@
 import React from "react";
 import CSSModules from "react-css-modules";
-import styles from "../../styles/atom/image.css";
+import styles from "../../styles/atom/image.pcss";
 
 class CustomImage extends React.Component {
 	componentDidMount() {

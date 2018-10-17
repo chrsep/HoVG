@@ -1,0 +1,58 @@
+@import "../base.pcss";
+
+.container {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(28, 29, 33, 0.88);
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  transform: translateY(5rem);
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.background:hover ~ .content {
+  opacity: 1 !important;
+  transform: translateY(0rem) !important;
+}
+
+.content:hover {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+.title {
+  font-size: 3.6rem;
+  text-align: center;
+}
+
+.year {
+  font-size: 2.4rem;
+  text-align: center;
+  color: var(--accentColor);
+}
+
+.shortDesc {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+
+.background {
+  height: 50vh;
+  width: 50vh;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

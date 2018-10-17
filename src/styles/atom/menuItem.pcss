@@ -1,0 +1,38 @@
+/**
+ * Created by chris on 6/1/2016.
+ */
+.container {
+  font-size: 3.2rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 6rem;
+  width: 40rem;
+  overflow: hidden;
+  transition: color 0.3s, width 0.3s, font-size 0.3s;
+  color: #eeeff7;
+  text-decoration: none;
+  border-bottom: solid #e0e8e0 thin;
+  white-space: nowrap;
+  flex-flow: column;
+}
+
+.container:hover {
+  width: 100vw;
+  font-size: 4.2rem;
+  .year {
+    height: 5rem;
+  }
+}
+
+.text {
+}
+
+.year {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.3s;
+  transition-delay: 0.1s;
+  font-size: 2.2rem;
+  color: #ea2e49;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import CSSModules from "react-css-modules";
-import styles from "../../styles/atom/menuItem.css";
+import styles from "../../styles/atom/menuItem.pcss";
 import {Link} from "react-router";
 
 class MenuItem extends React.Component {
