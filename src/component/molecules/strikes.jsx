@@ -1,6 +1,6 @@
 import React from "react";
 import CSSModules from "react-css-modules";
-import Strike from "../atom/strike.jsx";
+import Strike from "../atom/Strike.jsx";
 import styles from "../../styles/molecules/strikes.css";
 
 class Strikes extends React.Component {

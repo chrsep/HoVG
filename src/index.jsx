@@ -2,9 +2,9 @@ import React from "react";
 import {render} from "react-dom";
 import {Router, hashHistory, Route, IndexRoute} from "react-router";
 
-import App from "./component/app.jsx";
-import Home from "./component/pages/0home.jsx";
-import Interim from "./component/pages/interim.jsx";
+import App from "./component/App.jsx";
+import Home from "./component/pages/0Home.jsx";
+import Interim from "./component/pages/Interim.jsx";
 import First from "./component/pages/1first.jsx";
 import Second from "./component/pages/2second.jsx";
 import Third from "./component/pages/3third.jsx";
