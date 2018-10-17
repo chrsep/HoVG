@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react"
 import styles from "../../styles/molecules/menuButton.pcss"
+import {TimelineMax} from "gsap/TimelineMax";
 
 class MenuButton extends PureComponent {
   componentDidMount() {

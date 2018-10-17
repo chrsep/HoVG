@@ -2,6 +2,8 @@ import React, { PureComponent } from "react"
 import { Popularisation } from "../../data.js"
 import CustomImage from "../atom/customImage.js"
 import styles from "../../styles/pages/1first.pcss"
+import {TimelineLite} from "gsap/TimelineLite";
+import TweenMax from "gsap/TweenMax";
 
 let datas = Popularisation
 
@@ -22,7 +24,7 @@ class Second extends PureComponent {
   }
 
   handleScroll(e) {
-    let { container } = this.refs
+    let { container, content } = this.refs
     this.scrollLocation += e.deltaY < 0 ? 100 : -100
     if (this.scrollLocation > 0) {
       this.scrollLocation = 0
@@ -38,15 +40,8 @@ class Second extends PureComponent {
           window.innerWidth) *
         -1
     }
-    console.log("scroll" + this.scrollLocation)
-    console.log("offsetWidth" + container.offsetWidth)
-    console.log("innerWidth" + window.innerWidth)
 
-    let firstLayer = document.getElementsByClassName("firstLayer")
-    let firstLayerElement
-    for (firstLayerElement of firstLayer) {
-      TweenMax.to(firstLayerElement, 1, { x: this.scrollLocation })
-    }
+    TweenMax.to(content, 1, { x: this.scrollLocation })
   }
 
   componentWillLeave(callback) {

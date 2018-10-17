@@ -1,6 +1,8 @@
 import React, { PureComponent } from "react"
 import styles from "../../styles/molecules/menu.pcss"
 import MenuItem from "../atom/menuItem.js"
+import {TimelineMax} from "gsap/TimelineMax";
+import TweenMax from "gsap/TweenMax";
 
 class Menu extends PureComponent {
   componentDidMount() {

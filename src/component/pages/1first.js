@@ -2,6 +2,7 @@ import React, { PureComponent } from "react"
 import styles from "../../styles/pages/1first.pcss"
 import CustomImage from "../atom/customImage.js"
 import { inception } from "../../data.js"
+import {TimelineLite} from "gsap/TimelineLite";
 let datas = inception
 
 class First extends PureComponent {
@@ -22,6 +23,7 @@ class First extends PureComponent {
   }
 
   handleScroll(e) {
+    let { content } = this.refs
     let { container } = this.refs
     this.scrollLocation += e.deltaY < 0 ? 100 : -100
     if (this.scrollLocation > 0) {
@@ -42,11 +44,7 @@ class First extends PureComponent {
     console.log("offsetWidth" + container.offsetWidth)
     console.log("innerWidth" + window.innerWidth)
 
-    let firstLayer = document.getElementsByClassName("firstLayer")
-    let firstLayerElement
-    for (firstLayerElement of firstLayer) {
-      TweenMax.to(firstLayerElement, 1, { x: this.scrollLocation })
-    }
+    TweenMax.to(content, 1, { x: this.scrollLocation })
   }
 
   componentWillLeave(callback) {

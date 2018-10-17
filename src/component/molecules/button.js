@@ -1,6 +1,8 @@
 import React, { PureComponent } from "react"
 import styles from "../../styles/molecules/button.pcss"
 import { Link } from "react-router-dom"
+import { TweenMax } from "gsap/TweenMax"
+import { TweenLite } from "gsap/TweenLite"
 
 class Button extends PureComponent {
   componentDidMount() {

@@ -2,6 +2,8 @@ import React, { PureComponent } from "react"
 import styles from "../../styles/pages/0home.pcss"
 import Button from "../molecules/button.js"
 import Strikes from "../molecules/strikes.js"
+import {TimelineLite} from "gsap/TimelineLite";
+import {TimelineMax} from "gsap/TimelineMax";
 
 class Home extends PureComponent {
   constructor(props) {

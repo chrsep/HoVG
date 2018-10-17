@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react"
 import styles from "../../styles/atom/strike.pcss"
+import { TimelineMax } from "gsap/TimelineMax"
 
 class Strike extends PureComponent {
   componentDidMount() {
